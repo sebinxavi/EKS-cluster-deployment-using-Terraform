@@ -361,6 +361,10 @@ Terraform apply: it is used to apply the changes required to reach the desired s
 
 ## Step 7: Check the results
 
+# Console Output
+
+![alt text](https://i.ibb.co/M82DT0w/status.png)
+
 After the complete creation, you can go to your AWS account to see your resources:
 
 ## Step 8: Interact with your EKS cluster
