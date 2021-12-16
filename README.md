@@ -1,6 +1,6 @@
 # EKS cluster deployment using Terraform
 
-This blog will walk you through the process of deploying your first kubernetes cluster with infrastructure as code using Terraform and EKS.
+In this blog, I will be going to create an AWS EKS cluster with the help of Terraform scripts. Amazon Elastic Kubernetes Service (Amazon EKS) is a managed Kubernetes service provided by AWS. Terraform is a tool to manage your infrastructure as code so rather than provisioning an EKS cluster manually, you can use terraform to provision them for you.
 
 ## Step 1: Set up Terraform with AWS
 
@@ -396,7 +396,7 @@ kube-system       Active   64m
 root@ip-172-31-89-235:~# 
 ~~~
 
-That concludes this article on using Terraform to deploy Kubernetes clusters on AWS cloud provider. If your cluster is no longer needed, execute the command terraform destroy. Have a great time as you continue your Kubernetes journey!
+That concludes the blog on using Terraform to deploy Kubernetes clusters on AWS cloud provider. If your cluster is no longer needed, execute the command 'terraform destroy'. Have a great time as you continue your Kubernetes journey!
 
 ## Author
 Created by [@sebinxavi](https://www.linkedin.com/in/sebinxavi/) - feel free to contact me and advise as necessary!
