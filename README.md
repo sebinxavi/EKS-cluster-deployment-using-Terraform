@@ -32,7 +32,7 @@ provider "aws" {
 
 ## Step 3: Configure remote terraform state file
 
-We will be using S3 backed and and storing the terraform state file in the S3 bucket.
+We will be using S3 backed and storing the terraform state file in the S3 bucket.
 ~~~
 terraform {
   backend "s3" {
