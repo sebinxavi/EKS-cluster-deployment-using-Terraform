@@ -363,7 +363,9 @@ Terraform apply: it is used to apply the changes required to reach the desired s
 
 ### Console Output
 
-![alt text](https://i.ibb.co/WDxW9J8/status.png)
+<p align="left">
+  <img width="600" height="450" src="https://i.ibb.co/WDxW9J8/status.png">
+</p>
 
 After the complete creation, you can go to your AWS account to see your resources:
 
