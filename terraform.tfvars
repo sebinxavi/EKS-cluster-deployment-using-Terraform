@@ -4,7 +4,7 @@
 
 region = "us-east-1"
 project = "sebin-vpceks-demoproject"
-
+bucket = "terraform-state-bucket11"
 
 ### Updating the VPC Details
 #-----------------------------------
