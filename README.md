@@ -373,8 +373,28 @@ After the complete creation, you can go to your AWS account to see your resource
 
 To interact with your cluster, run this command in your terminal:
 
-aws eks --region us-east-1 update-kubeconfig --name my-eks-cluster
-Next, run kubectl get nodes and you will see two worker nodes from your cluster!
+~~~
+aws eks --region us-east-1 update-kubeconfig --name my-eks
+~~~
+
+Next, run kubectl get nodes and you will see the worker nodes from your cluster!
+
+~~~
+root@ip-172-31-89-235:~# kubectl get nodes
+NAME                             STATUS   ROLES    AGE   VERSION
+ip-172-16-149-229.ec2.internal   Ready    <none>   34m   v1.21.5-eks-bc4871b
+ip-172-16-173-136.ec2.internal   Ready    <none>   34m   v1.21.5-eks-bc4871b
+ip-172-16-85-204.ec2.internal    Ready    <none>   59m   v1.21.5-eks-bc4871b
+root@ip-172-31-89-235:~# 
+root@ip-172-31-89-235:~# 
+root@ip-172-31-89-235:~# kubectl get ns
+NAME              STATUS   AGE
+default           Active   64m
+kube-node-lease   Active   64m
+kube-public       Active   64m
+kube-system       Active   64m
+root@ip-172-31-89-235:~# 
+~~~
 
 That concludes this article on using Terraform to deploy Kubernetes clusters on AWS cloud provider. If your cluster is no longer needed, execute the command terraform destroy. Have a great time as you continue your Kubernetes journey!
 
