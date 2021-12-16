@@ -299,6 +299,9 @@ resource "aws_route_table_association" "private3" {
 ## Step 5: Create EKS Cluster
 
 ~~~
+# ---------------------------------------------------
+# Creating EKS Cluster
+# ---------------------------------------------------
 data "aws_eks_cluster" "cluster" {
   name = module.eks.cluster_id
 }
