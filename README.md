@@ -47,7 +47,7 @@ terraform {
 
 ## Step 4: Create VPC
 
-This EKS will be deployed in the custom VPC with three public subnets and three private subnets.
+This EKS will be deployed in the custom VPC of three public subnets and three private subnets.
 
 ~~~
 # ---------------------------------------------------
