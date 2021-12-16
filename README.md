@@ -15,9 +15,9 @@ Following these steps, AWS will provide you a Secret Access Key and an Access Ke
 
 In your own console, create a ~/.aws/credentials file and put your credentials in it:
 ~~~
- [default]
- aws_access_key_id = <Your access key>
- aws_secret_access_key = <Your secret key>
+[profile1]
+aws_access_key_id = <Your access key>
+aws_secret_access_key = <Your secret key>
 ~~~
 
 ## Step 2: create provider.tf
