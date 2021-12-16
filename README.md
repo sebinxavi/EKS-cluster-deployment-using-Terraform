@@ -1,4 +1,4 @@
-# EKS cluster deployment uing Terraform
+# EKS cluster deployment using Terraform
 
 This blog will walk you through the process of deploying your first kubernetes cluster with infrastructure as code using Terraform and EKS.
 
