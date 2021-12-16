@@ -354,14 +354,14 @@ module "eks" {
 
 ## Step 6: Deploy all your resources
 
-Once you have finished declaring the variables in terraform.tfvars file, you can deploy the respurces using below commands,
+Once you have finished declaring the variables in terraform.tfvars file, you can deploy the resources using below commands,
 
-Terraform init: it is used to initialize a working directory containing Terraform configuration files.
-Terraform apply: it is used to apply the changes required to reach the desired state of the configuration.
+- Terraform init: it is used to initialize a working directory containing Terraform configuration files.
+- Terraform apply: it is used to apply the changes required to reach the desired state of the configuration.
 
 ## Step 7: Check the results
 
-### Console Output
+###### Console Output
 
 ![alt text](https://i.ibb.co/WDxW9J8/status.png)
 
