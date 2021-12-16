@@ -352,18 +352,18 @@ module "eks" {
 }
 ~~~
 
-Step 6: Deploy all your resources
+## Step 6: Deploy all your resources
 
 Once you have finished declaring the variables in terraform.tfvars file, you can deploy the respurces using below commands,
 
 Terraform init: it is used to initialize a working directory containing Terraform configuration files.
 Terraform apply: it is used to apply the changes required to reach the desired state of the configuration.
 
-Step 7: Check the resuts
+## Step 7: Check the results
 
 After the complete creation, you can go to your AWS account to see your resources:
 
-Stpe 8: Interact with your EKS cluster
+## Step 8: Interact with your EKS cluster
 
 To interact with your cluster, run this command in your terminal:
 
