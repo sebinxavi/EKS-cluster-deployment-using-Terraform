@@ -14,26 +14,26 @@ In the AWS console, go to the IAM section and create a user named “EKS-User”
 Following these steps, AWS will provide you a Secret Access Key and an Access Key ID.
 
 In your own console, create a ~/.aws/credentials file and put your credentials in it:
-~~
+~~~
 [profile1]
 aws_access_key_id = <Your access key>
 aws_secret_access_key = <Your secret key>
-~~
+~~~
 
 ## Step 2: create provider.tf
 
-~~
+~~~
 provider "aws" {
   region     = var.region
   shared_credentials_file = "./.aws/credentials"
   profile = "profile1"
 }
-~~
+~~~
 
 ## Step 3: Configure remote terraform state file
 
 We will be using S3 backed and and storing the terraform state file in the S3 bucket.
-~~
+~~~
 terraform {
   backend "s3" {
     bucket                  = "terraform-state-bucket-dev1"
@@ -43,13 +43,13 @@ terraform {
     profile = "profile1"
   }
 }
-~~
+~~~
 
 ## Step 4: Create VPC
 
 This EKS will be deployed in the custom VPC with three public subnets and three private subnets.
 
-~~
+~~~
 # ---------------------------------------------------
 # Creating VPC
 # ---------------------------------------------------
@@ -294,11 +294,11 @@ resource "aws_route_table_association" "private3" {
   subnet_id      = aws_subnet.private3.id
   route_table_id = aws_route_table.private.id
 }
-~~
+~~~
 
 ## Step 5: Create EKS Cluster
 
-~~
+~~~
 # ---------------------------------------------------
 # Creating EKS Cluster
 # ---------------------------------------------------
@@ -350,7 +350,7 @@ module "eks" {
   }
 
 }
-~~
+~~~
 
 ## Step 6: Deploy all your resources
 
@@ -373,13 +373,13 @@ After the complete creation, you can go to your AWS account to see your resource
 
 To interact with your cluster, run this command in your terminal:
 
-~~
+~~~
 aws eks --region us-east-1 update-kubeconfig --name my-eks
-~~
+~~~
 
 Next, run kubectl get nodes and you will see the worker nodes from your cluster!
 
-~~
+~~~
 root@ip-172-31-89-235:~# kubectl get nodes
 NAME                             STATUS   ROLES    AGE   VERSION
 ip-172-16-149-229.ec2.internal   Ready    <none>   34m   v1.21.5-eks-bc4871b
@@ -394,7 +394,7 @@ kube-node-lease   Active   64m
 kube-public       Active   64m
 kube-system       Active   64m
 root@ip-172-31-89-235:~# 
-~~
+~~~
 
 That concludes this article on using Terraform to deploy Kubernetes clusters on AWS cloud provider. If your cluster is no longer needed, execute the command terraform destroy. Have a great time as you continue your Kubernetes journey!
 
@@ -403,4 +403,3 @@ Created by [@sebinxavi](https://www.linkedin.com/in/sebinxavi/) - feel free to c
 
 <a href="mailto:sebin.xavi1@gmail.com"><img src="https://img.shields.io/badge/-sebin.xavi1@gmail.com-D14836?style=flat&logo=Gmail&logoColor=white"/></a>
 <a href="https://www.linkedin.com/in/sebinxavi"><img src="https://img.shields.io/badge/-Linkedin-blue"/></a>
-
