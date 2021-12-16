@@ -8,8 +8,8 @@ The first thing you should do is set up your Terraform. We will create an AWS IA
 
 In the AWS console, go to the IAM section and create a user named “EKS-User”. Then add your user to a group named “FullAccessGroup”. Attaches to this group the following rights:
 
-AdministratorAccess
-AmazonEKSClusterPolicy
+- AdministratorAccess
+- AmazonEKSClusterPolicy
 
 Following these steps, AWS will provide you a Secret Access Key and an Access Key ID.
 
