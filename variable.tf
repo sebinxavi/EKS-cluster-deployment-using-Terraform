@@ -2,7 +2,7 @@
 #-------------------------------------
 variable "region" {}
 variable "project" {}
-
+variable "bucket" {}
 
 ## Declare the VPC Details
 #-------------------------------------
